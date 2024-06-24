@@ -3,7 +3,7 @@ terraform {
   required_providers {
     platform = {
       source  = "jfrog/platform"
-      version = "1.7.4"
+      version = "1.8.0"
     }
   }
 }
@@ -11,7 +11,7 @@ terraform {
 resource "platform_license" "this" {
   count = var.managed_license ? 1 : 0
 
-  key         = var.license_key
+  key = var.license_key
 }
 
 resource "platform_myjfrog_ip_allowlist" "this" {
